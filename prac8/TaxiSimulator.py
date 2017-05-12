@@ -13,7 +13,6 @@ def main():
                 print("{} - {}".format(i,taxi))
             taxi_selection = int(input("Choose taxi: "))
             current_taxi = taxis[taxi_selection]
-            selection = input("Bill to date: ${:.2f}\nq)uit, c)hoose taxi, d)rive\n>>> ".format(bill))
         elif selection == "d":
             distance_to_drive = int(input("Drive how far? "))
             current_taxi.start_fare()
@@ -21,10 +20,9 @@ def main():
             trip_cost = current_taxi.get_fare()
             bill += trip_cost
             print("Your {} trip cost you ${:.2f}".format(current_taxi.name, trip_cost))
-            selection = input("Bill to date: ${:.2f}\nq)uit, c)hoose taxi, d)rive\n>>> ".format(bill))
         else:
             print("Please enter a valid option")
-            selection = input("Bill to date: ${:.2f}\nq)uit, c)hoose taxi, d)rive\n>>> ".format(bill))
+        selection = input("Bill to date: ${:.2f}\nq)uit, c)hoose taxi, d)rive\n>>> ".format(bill))
 
 
 main()
